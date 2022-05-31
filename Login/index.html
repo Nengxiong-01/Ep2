@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        .image img{
+            height: auto;
+            width: 20%;
+            position: absolute;
+            margin-top: 5%;
+            margin-left: 8%;
+        }
+        .login{
+            position: absolute;
+            margin-top: 26%;
+            margin-left: 9%
+        }
+        .email-phone{
+            position: absolute;
+            border-color: blue;
+            width: auto;
+            height: 20px;
+            border-radius: 5px;
+            margin-top: 3%;
+        }
+        .password{
+            position: absolute;
+            border-color: blue;
+            width: auto;
+            height: 20px;
+            border-radius: 5px;
+            margin-top: 18%;
+        }
+        .button{
+            position: absolute;
+            height: 25px;
+            border-color: blue;
+            border-radius: 7px;
+            margin-top: 33%;
+            text-align: center;
+        }
+     </style>
+</head>
+ 
+<body>
+    <div class="image">
+        <img src="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" alt="Where are you">
+    </div>
+   <div class="login">
+       <h1>Sign in your Facebook account</h1>
+       <p>
+           <input class="email-phone" type="text" placeholder="Email or phone" id="email"> 
+       </p>
+       <p>
+            <input class="password" type="text" placeholder="Password" id="password">
+       </p>
+       <button class="button" onclick="Signin()"> Sign in</button>
+   </div>
+
+        
+   
+   <script>
+        let email = 'ter@gmail.com'
+        let phone = '12345678'
+        let password = '12345'
+        function Signin(){
+           let login = document.getElementById("email").value;
+           let pas = document.getElementById("password").value;
+           
+           
+           if ((login === email || login ===phone) && (pas === password) ){
+        
+                alert("Success");
+                return
+             
+           }
+           alert('fail!');
+                
+       }
+   </script>
+   
+</body>
+</html>
