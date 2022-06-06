@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var images = [];
+
+    images[0] = ['photoFromInternet'];
+    images[1] = ['photoFromInternet2'];
+    images[2] = ['photoFromInternet3'];
+    var index = 0;
+
+    function change() {
+    document.mainPhoto.src = images[index];
+    if (index == 2) {
+        index = 0;
+    } else {
+        index++;
+    }
+
+    setInterval(change(), 1000);
+    }
+
+    window.onload = change();
+    </script>
+
+    <div class="lastMain">
+    <a href="www.comingsoon.com" id="slider">
+        <img id="mainPhoto">
+        <div class="mainSlider">
+        <img src="photoFromInternet1" style="display: none">
+        <img src="photoFromInternet2*" style="display: none">
+        <img src="photoFromInternet3" style="display: none">
+        </div>
+    </a>
+    </div>
+
+</body>
+</html>
